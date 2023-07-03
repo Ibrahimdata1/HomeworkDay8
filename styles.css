@@ -1,31 +1,85 @@
-#container {
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(88, 171, 11);
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
-body{
-    background-color: antiquewhite;
-}
-.box-input{
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    max-height: 600px;
+    background-color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 35px;
 }
-.box-input-text{
-    padding: 12px;
-    margin: 10px;
-    border: 1px solid black;
+.todo-app h2{
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 35px;
 }
-.add-button{
-    background-color: aquamarine;
-    padding: 12px;
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 20px;
+}
+.inputText{
+    display: flex;
+    justify-content: center;
+    background-color: blanchedalmond;
+    padding: 20px;
+    border-radius: 30px;
+    max-width: 550px;
+    margin: 10px 20px 30px;
+}
+.inputText input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px 0px;
+    font-size: 20px;
+}
+.inputText button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color: orangered;
+    font-size: 16px;
+    border-radius: 40px;
     cursor: pointer;
 }
-#list {
-    display: flex;
-    flex-direction: column;
+#list-container li{
+    list-style: none;
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(6, 6, 146);
+    padding: 10px;
+    position: relative;
 }
-#list h2 {
-    border: 3px solid greenyellow;
-    color: blue;
-    padding: 12px;
+#list-container li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+#list-container li span:hover{
+    background: #edeef0;
 }
